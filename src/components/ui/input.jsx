@@ -1,8 +1,11 @@
-export function Input({ className = "", ...props }) {
+import React from "react";
+
+export function Input({ placeholder, type = "text", className = "", ...props }) {
   return (
     <input
-      className={`w-full px-3 py-2 rounded-xl border border-gray-300 bg-white text-gray-900 outline-none 
-      focus:ring-2 focus:ring-blue-500 transition-all ${className}`}
+      type={type}
+      placeholder={placeholder}
+      className={`border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 ${className}`}
       {...props}
     />
   );
