@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Separator({ className = "" }) {
-  return <hr className={`border-gray-200 dark:border-gray-700 ${className}`} />;
+export function Separator({ className = "" }) {
+  return <hr className={`border-gray-300 my-2 ${className}`} />;
 }
