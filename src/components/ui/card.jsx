@@ -1,30 +1,45 @@
-export function Card({ className = '', children, ...props }) {
+import React from "react";
+
+// Wrapper utama Card
+export function Card({ children, className = "" }) {
   return (
-    <div className={`rounded-2xl border bg-white shadow-sm ${className}`} {...props}>
+    <div className={`bg-white rounded-xl shadow p-4 ${className}`}>
       {children}
     </div>
   );
 }
 
-export function CardHeader({ className = '', children, ...props }) {
+// Header Card
+export function CardHeader({ children, className = "" }) {
   return (
-    <div className={`p-4 border-b ${className}`} {...props}>
+    <div className={`mb-2 ${className}`}>
       {children}
     </div>
   );
 }
 
-export function CardContent({ className = '', children, ...props }) {
+// Title Card
+export function CardTitle({ children, className = "" }) {
   return (
-    <div className={`p-4 ${className}`} {...props}>
+    <h2 className={`text-lg font-semibold ${className}`}>
       {children}
-    </div>
+    </h2>
   );
 }
 
-export function CardFooter({ className = '', children, ...props }) {
+// Description Card
+export function CardDescription({ children, className = "" }) {
   return (
-    <div className={`p-4 border-t ${className}`} {...props}>
+    <p className={`text-sm text-gray-500 ${className}`}>
+      {children}
+    </p>
+  );
+}
+
+// Content Card
+export function CardContent({ children, className = "" }) {
+  return (
+    <div className={`mt-2 ${className}`}>
       {children}
     </div>
   );
